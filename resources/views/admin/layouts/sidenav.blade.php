@@ -12,6 +12,12 @@
                         <li><a href="#"><span>Ver</span></a></li>
                     </ul>
                 </li>
+                <li class="has-sub-menu"><a href="#"><i class="ti-medall"></i><span>Programas Relacionados</span></a>
+                    <ul class="side-header-sub-menu">
+                        <li><a href="{{route('references.index')}}"><span>Ver todas</span></a></li>
+                        <li><a href="{{route('references.create')}}"><span>Crear</span></a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
 
