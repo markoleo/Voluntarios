@@ -10,9 +10,9 @@ class Institutions extends Model
     protected $guarded = ['id'];
 
 
-    public function breeds()
+    public function sector()
     {
-        return $this-> belongsTo(sector::class);
+        return $this-> belongsTo(Sector::class);
 
     }
 }

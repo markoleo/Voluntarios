@@ -43,12 +43,12 @@ class ReferencesController extends Controller
     {
         //
         References::create([
-            'name' => ReferencesController::ucfirst($request->name),
-            'reference' => ReferencesController::ucfirst($request->reference),
+            'name' => $request->name,
+            'reference' => $request->reference,
             'created_by' => 1,
             'updated_by' => 1
         ]);
-        return redirect()->route('references.index')->with('success','Se ha añadido el nuevo progrma: ' . $request->name);
+        return redirect()->route('references.index')->with('success','Se ha añadido el nuevo programa: ' . $request->name);
     }
 
     /**
@@ -71,8 +71,8 @@ class ReferencesController extends Controller
     public function edit($id)
     {
         //
-        $reference = References::find($id);
-        return view('admin.references.edit',compact('reference'));
+        $references = References::find($id);
+        return view('admin.references.edit',compact('references'));
     }
 
     /**
@@ -84,11 +84,11 @@ class ReferencesController extends Controller
      */
     public function update(ReferencesUpdateRequest $request, $id)
     {
-        //
-        $reference =  Specie::find($id);
-        $reference->fill([
-            'name' => ReferencesController::ucfirst($request->name),
-            'reference' => ReferencesController::ucfirst($request->reference),
+
+        $references = References::find($id);
+        $references->fill([
+            'name' => $request->name,
+            'reference' => $request->reference,
             'created_by' => 1,
             'updated_by' => 1
         ])->save();
@@ -107,10 +107,4 @@ class ReferencesController extends Controller
         //
     }
 
-    private static function ucfirst($string){
-        if(empty($string))
-            return null;
-        else
-            return Str::ucfirst($string);
-    }
 }

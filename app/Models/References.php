@@ -12,7 +12,7 @@ class References extends Model
 
     public function volunteers()
     {
-        return $this-> hasMany(Volunteers::class);
+        return $this->hasMany(Volunteers::class);
 
     }
 }

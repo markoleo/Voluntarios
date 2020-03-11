@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\ProjectUpdateRequest;
-use App\Http\Requests\ProjectStoreRequest;
+use Illuminate\Http\Request;
+use App\Http\Requests\SectorUpdateRequest;
+use App\Http\Requests\SectorStoreRequest;
 use App\Http\Controllers\Controller;
-use App\Models\Project;
+use App\Models\Sector;
 use Illuminate\Support\Str;
 
-
-class ProjectController extends Controller
+class SectorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,8 +19,8 @@ class ProjectController extends Controller
     public function index()
     {
         //
-        $projects = Project::orderBy('id')->paginate(10);
-        return view('admin.projects.index',compact('projects'));
+        $sectors = Sector::orderBy('id')->paginate(10);
+        return view('admin.sectors.index',compact('sectors'));
     }
 
     /**
@@ -31,7 +31,7 @@ class ProjectController extends Controller
     public function create()
     {
         //
-        return view('admin.projects.create');
+        return view('admin.sectors.create');
     }
 
     /**
@@ -40,17 +40,16 @@ class ProjectController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ProjectStoreRequest $request)
+    public function store(SectorStoreRequest $request)
     {
 
-        Project::create([
+        Sector::create([
             'name' => $request->name,
-            'short_name' => $request->short_name,
-            'Project_Type' => $request->Project_Type,
+            'category' => $request->category,
             'created_by' => 1,
             'updated_by' => 1
         ]);
-        return redirect()->route('projects.index')->with('success','Se ha añadido el nuevo proyecto: ' . $request->name);
+        return redirect()->route('sectors.index')->with('success','Se ha añadido el nuevo sector: ' . $request->name);
     }
 
     /**
@@ -73,8 +72,8 @@ class ProjectController extends Controller
     public function edit($id)
     {
         //
-        $projects = Project::find($id);
-        return view('admin.projects.edit',compact('projects'));
+        $sectors = Sector::find($id);
+        return view('admin.sectors.edit',compact('sectors'));
     }
 
     /**
@@ -84,19 +83,18 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(ProjectUpdateRequest $request, $id)
+    public function update(SectorUpdateRequest $request, $id)
     {
         //
-        $project =  Project::find($id);
-        $project->fill([
-            'name' => ProjectController::ucfirst($request->name),
-            'short_name' => ProjectController::ucfirst($request->short_name),
-            'Project_Type' => ProjectController::ucfirst($request->Project_Type),
+        $sectors =  Sector::find($id);
+        $sectors->fill([
+            'name' => ($request->name),
+            'category' => ($request->category),
             'created_by' => 1,
             'updated_by' => 1
         ])->save();
 
-        return redirect()->route('projects.index')->with('success','Se ha actualizado correctamente');
+        return redirect()->route('sectors.index')->with('success','Se ha actualizado correctamente');
     }
 
     /**
@@ -110,10 +108,5 @@ class ProjectController extends Controller
         //
     }
 
-    private static function ucfirst($string){
-        if(empty($string))
-            return null;
-        else
-            return Str::ucfirst($string);
-    }
+
 }

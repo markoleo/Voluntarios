@@ -1,7 +1,7 @@
 @extends('admin.layouts.app')
 
 @section('title')
-    Programas Relacionados
+    Sectores
 @endsection
 
 @section('subtitle')
@@ -9,7 +9,7 @@
 @endsection
 
 @section('buttons-heading')
-    <a class="button button-outline button-success" href="{{route('references.create')}}">Nuevo programa</a>
+    <a class="button button-outline button-success" href="{{route('sectors.create')}}">Nuevo programa</a>
 @endsection
 
 @section('content')
@@ -28,18 +28,18 @@
                         </thead><!-- Table Head End -->
                         <!-- Table Body Start -->
                         <tbody>
-                        @if($references->isEmpty())
+                        @if($sectors->isEmpty())
                             <tr>
                                 <td colspan="3" class="text-center">No hay información</td>
                             </tr>
                         @endif
-                        @foreach($references as $reference)
+                        @foreach($sectors as $sector)
                             <tr>
-                                <td>{{$reference->name}}</td>
-                                <td>{{$reference->reference}}</td>
+                                <td>{{$sector->name}}</td>
+                                <td>{{$sector->category}}</td>
                                 <td>
                                     <div class="table-action-buttons">
-                                      <a class="edit button button-box button-xs button-info" href="{{route('references.edit', $reference->id)}}"><i class="zmdi zmdi-edit"></i></a>
+                                        <a class="edit button button-box button-xs button-info" href="{{route('sectors.edit', $sector->id)}}"><i class="zmdi zmdi-edit"></i></a>
                                     </div>
                                 </td>
                                 <td>
@@ -53,7 +53,7 @@
                         </tbody><!-- Table Body End -->
                     </table>
                 </div>
-            {{ $references->links() }} <!-- pa que o que? -->
+            {{ $sectors->links() }} <!-- pa que o que? -->
             </div>
         </div>
     </div>

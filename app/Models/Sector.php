@@ -10,7 +10,7 @@ class Sector extends Model
     protected $guarded = ['id'];
 
 
-    public function volunteers()
+    public function institution()
     {
         return $this-> hasMany(Institutions::class);
 

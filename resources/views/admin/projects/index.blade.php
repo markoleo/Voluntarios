@@ -1,7 +1,7 @@
 @extends('admin.layouts.app')
 
 @section('title')
-    Programas Relacionados
+    Proyectos
 @endsection
 
 @section('subtitle')
@@ -9,7 +9,7 @@
 @endsection
 
 @section('buttons-heading')
-    <a class="button button-outline button-success" href="{{route('references.create')}}">Nuevo programa</a>
+    <a class="button button-outline button-success" href="{{route('projects.create')}}">Nuevo proyecto</a>
 @endsection
 
 @section('content')
@@ -21,25 +21,30 @@
                         <!-- Table Head Start -->
                         <thead>
                         <tr>
+
                             <th>Nombre</th>
-                            <th>Programa</th>
+                            <th>Abreviatura</th>
+                            <th>Tipo de Proyecto</th>
+                            <th></th>
                             <th></th>
                         </tr>
                         </thead><!-- Table Head End -->
                         <!-- Table Body Start -->
                         <tbody>
-                        @if($references->isEmpty())
+                        @if($projects->isEmpty())
                             <tr>
                                 <td colspan="3" class="text-center">No hay información</td>
                             </tr>
                         @endif
-                        @foreach($references as $reference)
+                        @foreach($projects as $project)
                             <tr>
-                                <td>{{$reference->name}}</td>
-                                <td>{{$reference->reference}}</td>
+
+                                <td>{{$project->name}}</td>
+                                <td>{{$project->short_name}}</td>
+                                <td>{{$project->Project_Type}}</td>
                                 <td>
                                     <div class="table-action-buttons">
-                                      <a class="edit button button-box button-xs button-info" href="{{route('references.edit', $reference->id)}}"><i class="zmdi zmdi-edit"></i></a>
+                                        <a class="edit button button-box button-xs button-info" href="{{route('projects.edit', $project->id)}}"><i class="zmdi zmdi-edit"></i></a>
                                     </div>
                                 </td>
                                 <td>
@@ -53,7 +58,7 @@
                         </tbody><!-- Table Body End -->
                     </table>
                 </div>
-            {{ $references->links() }} <!-- pa que o que? -->
+            {{ $projects->links() }} <!-- pa que o que? -->
             </div>
         </div>
     </div>

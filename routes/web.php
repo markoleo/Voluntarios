@@ -26,5 +26,29 @@ Route::resource('admin/programas', 'Admin\ReferencesController')->names([
 ])->only([
     'index', 'create', 'store', 'edit', 'update'
 ])->parameters([
-    'progrmas' => 'references'
+    'programas' => 'references'
+]);
+
+Route::resource('admin/proyectos', 'Admin\ProjectController')->names([
+    'index' => 'projects.index',
+    'create' => 'projects.create',
+    'store' => 'projects.store',
+    'edit' => 'projects.edit',
+    'update' => 'projects.update'
+])->only([
+    'index', 'create', 'store', 'edit', 'update'
+])->parameters([
+    'proyectos' => 'projects'
+]);
+
+Route::resource('admin/voluntarios', 'Admin\VolunteersController')->names([
+    'index' => 'volunteers.index',
+    'create' => 'volunteers.create',
+    'store' => 'volunteers.store',
+    'edit' => 'volunteers.edit',
+    'update' => 'volunteers.update'
+])->only([
+    'index', 'create', 'store', 'edit', 'update'
+])->parameters([
+    'voluntarios' => 'volunteers'
 ]);

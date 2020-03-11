@@ -1,0 +1,128 @@
+[
+	{
+	
+		"name" : "Información en el Contexto Comunitario",
+		"short_name" : "ICC",
+		"Project_Type" : "Sensibilización"
+		
+	},
+	{
+		
+		"name" : "Información en el Contexto Escolar",
+		"short_name" : "ICE",
+		"Project_Type" : "Sensibilización"
+		
+	},
+	{
+		
+		"name" : "Información en el Contexto Laboral",
+		"short_name" : "ICE",
+		"Project_Type" : "Sensibilización"
+		
+	},
+	{
+		
+		"name" : "Información en el Contexto de Salud",
+		"short_name" : "ICS",
+		"Project_Type" : "Sensibilización"
+		
+	},
+	{
+		
+		"name" : "Orientación Preventiva Temprana",
+		"short_name" : "OPT",
+		"Project_Type" : "Habilidades para la vida"
+		
+	},
+	{
+		
+		"name" : "Orientación Preventiva Infantil",
+		"short_name" : "OPI",
+		"Project_Type" : "Habilidades para la vida"
+		
+	},
+	{
+		
+		"name" : "Orientación Familiar Preventiva",
+		"short_name" : "OFP",
+		"Project_Type" : "Habilidades para la vida"
+		
+	},
+	{
+	
+		"name" : "Desarrollo de Competencias con Preadolecentes",
+		"short_name" : "DCP",
+		"Project_Type" : "Desarrollo de Competencias"
+		
+	},
+	{
+		
+		"name" : "Desarrollo de Competencias con Jóvenes",
+		"short_name" : "DCJ",
+		"Project_Type" : "Desarrollo de Competencias"
+		
+	},
+	{
+		
+		"name" : "Desarrollo de Competencias con Adultos Jóvenes",
+		"short_name" : "DCAJ",
+		"Project_Type" : "Desarrollo de Competencias"
+		
+	},
+	{
+		
+		"name" : "Tabaco:Pensamiento Crítico ante la Oferta",
+		"short_name" : "TAB",
+		"Project_Type" : "Desarrollo de Competencias"
+		
+	},
+	{
+		
+		"name" : "Prevención con Hijos de Usuarios de Drogas",
+		"short_name" : "PHU",
+		"Project_Type" : "Desarrollo de Competencias"
+		
+	},
+	{
+		
+		"name" : "Desarrollo de Competencias con Adultos Mayores",
+		"short_name" : "DAM",
+		"Project_Type" : "Desarrollo de Competencias"
+		
+	},
+	{
+		
+		"name" : "Estimulación Congnitiva",
+		"short_name" : "EDE",
+		"Project_Type" : "Desarrollo de Competencias"
+		
+	},
+	{
+		
+		"name" : "Abuso de Alcohol y Violencia de Género",
+		"short_name" : "AVG",
+		"Project_Type" : "Desarrollo de Competencias"
+		
+	},
+	{
+		
+		"name" : "Alcohol: Autoeficacia ante el consumo excesivo",
+		"short_name" : "ACE",
+		"Project_Type" : "Desarrollo de Competencias"
+		
+	},
+	{
+		
+		"name" : "Metanfetaminas: Competencias Socioafectivas para Afrontar Riesgos",
+		"short_name" : "MCS",
+		"Project_Type" : "Desarrollo de Competencias"
+		
+	},
+	{
+		
+		"name" : "Talleres en el Contexto Laboral",
+		"short_name" : "TCL",
+		"Project_Type" : "Desarrollo de Competencias"
+		
+	}
+]
