@@ -20,7 +20,7 @@ class SectorController extends Controller
     {
         //
         $sectors = Sector::orderBy('id')->paginate(10);
-        return view('admin.sectors.index',compact('sectors'));
+        return view('admin.sector.index',compact('sectors'));
     }
 
     /**
@@ -31,7 +31,7 @@ class SectorController extends Controller
     public function create()
     {
         //
-        return view('admin.sectors.create');
+        return view('admin.sector.create');
     }
 
     /**
@@ -49,7 +49,7 @@ class SectorController extends Controller
             'created_by' => 1,
             'updated_by' => 1
         ]);
-        return redirect()->route('sectors.index')->with('success','Se ha añadido el nuevo sector: ' . $request->name);
+        return redirect()->route('sector.index')->with('success','Se ha añadido el nuevo sector: ' . $request->name);
     }
 
     /**
@@ -73,7 +73,7 @@ class SectorController extends Controller
     {
         //
         $sectors = Sector::find($id);
-        return view('admin.sectors.edit',compact('sectors'));
+        return view('admin.sector.edit',compact('sectors'));
     }
 
     /**
@@ -94,7 +94,7 @@ class SectorController extends Controller
             'updated_by' => 1
         ])->save();
 
-        return redirect()->route('sectors.index')->with('success','Se ha actualizado correctamente');
+        return redirect()->route('sector.index')->with('success','Se ha actualizado correctamente');
     }
 
     /**

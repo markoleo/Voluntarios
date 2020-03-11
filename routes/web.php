@@ -52,3 +52,15 @@ Route::resource('admin/voluntarios', 'Admin\VolunteersController')->names([
 ])->parameters([
     'voluntarios' => 'volunteers'
 ]);
+
+Route::resource('admin/sectores', 'Admin\SectorController')->names([
+    'index' => 'sector.index',
+    'create' => 'sector.create',
+    'store' => 'sector.store',
+    'edit' => 'sector.edit',
+    'update' => 'sector.update'
+])->only([
+    'index', 'create', 'store', 'edit', 'update'
+])->parameters([
+    'sectores' => 'sector'
+]);

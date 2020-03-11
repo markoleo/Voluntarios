@@ -9,7 +9,7 @@
 @endsection
 
 @section('buttons-heading')
-    <a class="button button-outline button-success" href="{{route('sectors.create')}}">Nuevo programa</a>
+    <a class="button button-outline button-success" href="{{route('sector.create')}}">Nuevo programa</a>
 @endsection
 
 @section('content')
@@ -22,7 +22,7 @@
                         <thead>
                         <tr>
                             <th>Nombre</th>
-                            <th>Programa</th>
+                            <th>Categoria</th>
                             <th></th>
                         </tr>
                         </thead><!-- Table Head End -->
@@ -39,7 +39,7 @@
                                 <td>{{$sector->category}}</td>
                                 <td>
                                     <div class="table-action-buttons">
-                                        <a class="edit button button-box button-xs button-info" href="{{route('sectors.edit', $sector->id)}}"><i class="zmdi zmdi-edit"></i></a>
+                                        <a class="edit button button-box button-xs button-info" href="{{route('sector.edit', $sector->id)}}"><i class="zmdi zmdi-edit"></i></a>
                                     </div>
                                 </td>
                                 <td>

@@ -38,8 +38,9 @@
                 </li>
                 <li class="has-sub-menu"><a href="#"><i class="ti-files"></i><span>Sectores</span></a>
                     <ul class="side-header-sub-menu">
-                        <li><a href="#"><span>Ver todas</span></a></li>
-                        <li><a href="#"><span>Crear</span></a></li>
+                        <li><a href="{{route('sector.index')}}"><span>Ver todas</span></a></li>
+                        <li><a href="{{route('sector.create')}}"><span>Crear</span></a></li>
+                    </ul>
                     </ul>
                 </li>
             </ul>
