@@ -46,9 +46,10 @@ Route::resource('admin/voluntarios', 'Admin\VolunteersController')->names([
     'create' => 'volunteers.create',
     'store' => 'volunteers.store',
     'edit' => 'volunteers.edit',
-    'update' => 'volunteers.update'
+    'update' => 'volunteers.update',
+    'destroy' => 'volunteers.destroy'
 ])->only([
-    'index', 'create', 'store', 'edit', 'update'
+    'index', 'create', 'store', 'edit', 'update','destroy'
 ])->parameters([
     'voluntarios' => 'volunteers'
 ]);
@@ -64,3 +65,12 @@ Route::resource('admin/sectores', 'Admin\SectorController')->names([
 ])->parameters([
     'sectores' => 'sector'
 ]);
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

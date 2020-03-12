@@ -1,15 +1,21 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html html class="no-js" lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>CIJ Tulancingo</title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="Sistema para el Control de Coberturas">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Scripts -->
+
+
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="{{asset("assets/images/logo/CIJTulancingo.png")}}">
+    <!-- Fonts -->
+
 
     <!-- CSS
     ============================================ -->
@@ -18,16 +24,15 @@
 </head>
 
 <body class="side-header-light header-top-dark">
-
 <div class="main-wrapper">
 
     <!-- Header Section Start -->
-    @include('admin.layouts.header')
-    <!-- Header Section End -->
+@include('admin.layouts.header')
+<!-- Header Section End -->
 
     <!-- Side Header Start -->
-    @include('admin.layouts.sidenav')
-    <!-- Side Header End -->
+@include('admin.layouts.sidenav')
+<!-- Side Header End -->
 
     <!-- Content Body Start -->
     <div class="content-body">
@@ -60,8 +65,8 @@
     </div><!-- Content Body End -->
 
     <!-- Footer Section Start -->
-    @include('admin.layouts.footer')
-    <!-- Footer Section End -->
+@include('admin.layouts.footer')
+<!-- Footer Section End -->
 
 </div>
 
@@ -70,11 +75,11 @@
 @include('admin.layouts.js')
 
 @if(session('success'))
-<script>
-    (function ($) {
-        toastr.success('{{session('success')}}');
-    })(jQuery);
-</script>
+    <script>
+        (function ($) {
+            toastr.success('{{session('success')}}');
+        })(jQuery);
+    </script>
 @endif
 </body>
 

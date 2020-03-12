@@ -9,6 +9,7 @@
 @endsection
 
 @section('buttons-heading')
+
     <a class="button button-outline button-success" href="{{route('volunteers.create')}}">Nuevo Voluntario</a>
 @endsection
 
@@ -55,7 +56,16 @@
                                 </td>
                                 <td>
                                     <div class="table-action-buttons">
-                                        <a class="delete button button-box button-xs  button-danger " href="#"><i class="zmdi zmdi-delete"></i></a>
+                                        {!! Form::open(['route' =>['volunteers.destroy', $volunteer->id],
+                                        'method' => 'DELETE']) !!}
+
+                                            <button  class="delete button button-box button-xs  button-danger">
+                                                <a>
+                                                    <i class="zmdi zmdi-delete"></i>
+                                                </a>
+                                            </button>
+                                        {!! Form::close() !!}
+
                                     </div>
                                 </td>
                             </tr>

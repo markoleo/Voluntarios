@@ -122,7 +122,20 @@ class VolunteersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $volunteer= Volunteers::find($id);
+        $volunteer->fill([
+                 'key' => $volunteer->key,
+                 'name' => $volunteer->name,
+                 'last_name' => $volunteer->last_name,
+                 'second_name' => $volunteer->second_name,
+                 'address' => $volunteer->address,
+                 'phone' => $volunteer->phone,
+                 'references_id' =>$volunteer->references_id,
+                 'created_by' => 1,
+                 'updated_by' => 1
+             ])->delete();
+
+        return redirect()->route('volunteers.index')->with('success','Se ha eliminado al voluntario' . $volunteer->name);
     }
 
 

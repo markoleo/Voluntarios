@@ -1,31 +1,27 @@
 [
 	{
-	
+		
 		"name" : "Información en el Contexto Comunitario",
 		"short_name" : "ICC",
 		"Project_Type" : "Sensibilización"
-		
 	},
 	{
 		
 		"name" : "Información en el Contexto Escolar",
 		"short_name" : "ICE",
 		"Project_Type" : "Sensibilización"
-		
 	},
 	{
 		
 		"name" : "Información en el Contexto Laboral",
 		"short_name" : "ICE",
 		"Project_Type" : "Sensibilización"
-		
 	},
 	{
 		
 		"name" : "Información en el Contexto de Salud",
 		"short_name" : "ICS",
 		"Project_Type" : "Sensibilización"
-		
 	},
 	{
 		
@@ -39,90 +35,238 @@
 		"name" : "Orientación Preventiva Infantil",
 		"short_name" : "OPI",
 		"Project_Type" : "Habilidades para la vida"
-		
 	},
 	{
 		
 		"name" : "Orientación Familiar Preventiva",
 		"short_name" : "OFP",
 		"Project_Type" : "Habilidades para la vida"
-		
 	},
 	{
-	
+		
 		"name" : "Desarrollo de Competencias con Preadolecentes",
 		"short_name" : "DCP",
 		"Project_Type" : "Desarrollo de Competencias"
-		
 	},
 	{
 		
 		"name" : "Desarrollo de Competencias con Jóvenes",
 		"short_name" : "DCJ",
 		"Project_Type" : "Desarrollo de Competencias"
-		
 	},
 	{
 		
 		"name" : "Desarrollo de Competencias con Adultos Jóvenes",
 		"short_name" : "DCAJ",
 		"Project_Type" : "Desarrollo de Competencias"
-		
 	},
 	{
 		
 		"name" : "Tabaco:Pensamiento Crítico ante la Oferta",
 		"short_name" : "TAB",
 		"Project_Type" : "Desarrollo de Competencias"
-		
 	},
 	{
 		
 		"name" : "Prevención con Hijos de Usuarios de Drogas",
 		"short_name" : "PHU",
 		"Project_Type" : "Desarrollo de Competencias"
-		
 	},
 	{
 		
 		"name" : "Desarrollo de Competencias con Adultos Mayores",
 		"short_name" : "DAM",
 		"Project_Type" : "Desarrollo de Competencias"
-		
 	},
 	{
 		
 		"name" : "Estimulación Congnitiva",
 		"short_name" : "EDE",
 		"Project_Type" : "Desarrollo de Competencias"
-		
 	},
 	{
 		
 		"name" : "Abuso de Alcohol y Violencia de Género",
 		"short_name" : "AVG",
 		"Project_Type" : "Desarrollo de Competencias"
-		
 	},
 	{
 		
 		"name" : "Alcohol: Autoeficacia ante el consumo excesivo",
 		"short_name" : "ACE",
 		"Project_Type" : "Desarrollo de Competencias"
-		
 	},
 	{
 		
 		"name" : "Metanfetaminas: Competencias Socioafectivas para Afrontar Riesgos",
 		"short_name" : "MCS",
 		"Project_Type" : "Desarrollo de Competencias"
-		
 	},
 	{
 		
 		"name" : "Talleres en el Contexto Laboral",
 		"short_name" : "TCL",
 		"Project_Type" : "Desarrollo de Competencias"
+	},
+	{
 		
+		"name" : "Inhalables: Habilidades para Rechazar Situaciones de Consumo",
+		"short_name" : "IHR",
+		"Project_Type" : "Desarrollo de Competencias"
+	},
+	{
+		
+		"name" : "Emociones, Sexualidad y Noviazgo",
+		"short_name" : "ESN",
+		"Project_Type" : "Desarrollo de Competencias"
+	},
+	{
+		"name": "Autocontrol ante el Abuso de Internet, Juegos de Video y de Azar",
+		"short_name": "AAI",
+		"Project_Type": "Desarrollo de Competencias"
+	},
+	{
+		
+		"name" : "¿Mariguana? Informate y Decide",
+		"short_name" : "MID",
+		"Project_Type" : "Desarrollo de Competencias"
+	},
+	{
+		
+		"name" : "Competencias Prosociales y Autocontrol en la adolescencia",
+		"short_name" : "CPA",
+		"Project_Type" : "Desarrollo de Competencias"
+	},
+	{
+		
+		"name" : "Alternativas Saludables para Prevenir Prácticas Sexuales de Riesgo",
+		"short_name" : "SUD",
+		"Project_Type" : "Desarrollo de Competencias"
+	},
+	{
+		
+		"name" : "Detección Temprana en Prevención",
+		"short_name" : "DTP",
+		"Project_Type" : "Reducción de Riesgos"
+	},
+	{
+		
+		"name" : "Intervención Temprana con Migrantes",
+		"short_name" : "IPM",
+		"Project_Type" : "Reducción de Riesgos"
+	},
+	{
+		
+		"name" : "Consejo Breve para Usuarios Experimentales",
+		"short_name" : "CB",
+		"Project_Type" : "Reducción de Riesgos"
+	},
+	{
+		
+		"name" : "Bienestar emocional en el embarazo: Consejería",
+		"short_name" : "BEE",
+		"Project_Type" : "Reducción de Riesgos"
+	},
+	{
+		
+		"name" : "Reducción de Riesgos y Daños Asociados al Consumo de Mariguana y Alcohol",
+		"short_name" : "RMA",
+		"Project_Type" : "Reducción de Riesgos"
+	},
+	{
+		
+		"name" : "Alcohol: Autoeficacia ante el consumo excesivo parte 2",
+		"short_name" : "ACE",
+		"Project_Type" : "Reducción de Riesgos"
+	},
+	{
+		
+		"name" : "Metanfetaminas: Competencias Socioafectivas para Afrontar Riesgos parte 2",
+		"short_name" : "MCS",
+		"Project_Type" : "Reducción de Riesgos"
+	},
+	{
+		
+		"name" : "Capacitación a Personas Estratégicas",
+		"short_name" : "CP",
+		"Project_Type" : "Formación de Personas Voluntarias y Estratégicas"
+	},
+	{
+		
+		"name" : "Capacitación a Voluntarios",
+		"short_name" : "CV",
+		"Project_Type" : "Formación de Personas Voluntarias y Estratégicas"
+	},
+	{
+		
+		"name" : "Asesoria",
+		"short_name" : "AS",
+		"Project_Type" : "Formación de Personas Voluntarias y Estratégicas"
+	},
+	{
+		
+		"name" : "Acompañamiento",
+		"short_name" : "AC",
+		"Project_Type" : "Formación de Personas Voluntarias y Estratégicas"
+	},
+	{
+		
+		"name" : "Observación",
+		"short_name" : "OB",
+		"Project_Type" : "Formación de Personas Voluntarias y Estratégicas"
+	},
+	{
+		
+		"name" : "Lúdico - Recreativas",
+		"short_name" : "LR",
+		"Project_Type" : "Promoción de la Salud"
+	},
+	{
+		
+		"name" : "Físico - Deportivas",
+		"short_name" : "FD",
+		"Project_Type" : "Promoción de la Salud"
+	},
+	{
+		
+		"name" : "Educativo - Formativas",
+		"short_name" : "EF",
+		"Project_Type" : "Promoción de la Salud"
+	},
+	{
+		
+		"name" : "Culturales - Artísticas",
+		"short_name" : "CA",
+		"Project_Type" : "Promoción de la Salud"
+	},
+	{
+		
+		"name" : "Curso de Verano y de Otros Periodos  Vacacionales",
+		"short_name" : "CVO",
+		"Project_Type" : "Promoción de la Salud"
+	},
+	{
+		
+		"name" : "Información de Servicios Institucionales",
+		"short_name" : "ISI",
+		"Project_Type" : "Difusión de Servicios Institucionales"
+	},
+	{
+		
+		"name" : "Promoción para la Captación de Voluntarios",
+		"short_name" : "PCV",
+		"Project_Type" : "Difusión de Servicios Institucionales"
+	},
+	{
+		
+		"name" : "Promoción y Difusión Institucional",
+		"short_name" : "PDI",
+		"Project_Type" : "Difusión de Servicios Institucionales"
+	},
+	{
+		
+		"name" : "Administración de redes virtuales",
+		"short_name" : "ARV",
+		"Project_Type" : "Difusión de Servicios Institucionales"
 	}
 ]
