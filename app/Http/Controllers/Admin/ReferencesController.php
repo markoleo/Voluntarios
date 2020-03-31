@@ -104,7 +104,15 @@ class ReferencesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $references = References::find($id);
+        $references->fill([
+            'name' => $references->name,
+            'reference' => $references->reference,
+            'created_by' => 1,
+            'updated_by' => 1
+        ])->delete();
+
+        return redirect()->route('references.index')->with('success','Se ha eliminado el programa' . $references->name);
     }
 
 }

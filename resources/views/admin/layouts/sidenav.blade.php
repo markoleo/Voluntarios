@@ -5,11 +5,11 @@
 
         <nav class="side-header-menu" id="side-header-menu">
             <ul>
-                <li><a href="{{ url('/') }}"><i class="ti-home"></i> <span>Home</span></a></li>
+                <li><a href="{{route('admin.index')}}"><i class="ti-home"></i> <span>Inicio</span></a></li>
                 <li class="has-sub-menu"><a href="#"><i class="ti-clipboard"></i> <span>Mis Registros</span></a>
                     <ul class="side-header-sub-menu">
-                        <li><a href="#"><span>Crear</span></a></li>
-                        <li><a href="#"><span>Ver</span></a></li>
+                        <li><a href="{{route('toppings.create')}}"><span>Crear</span></a></li>
+                        <li><a href="{{route('toppings.index')}}"><span>Ver</span></a></li>
                     </ul>
                 </li>
                 <li class="has-sub-menu"><a href="#"><i class="ti-bookmark-alt"></i><span>Programas Relacionados</span></a>
@@ -32,8 +32,8 @@
                 </li>
                 <li class="has-sub-menu"><a href="#"><i class="ti-direction"></i><span>Instituciones</span></a>
                     <ul class="side-header-sub-menu">
-                        <li><a href="#"><span>Ver todas</span></a></li>
-                        <li><a href="#"><span>Crear</span></a></li>
+                        <li><a href="{{route('institutions.index')}}"><span>Ver todas</span></a></li>
+                        <li><a href="{{route('institutions.create')}}"><span>Crear</span></a></li>
                     </ul>
                 </li>
                 <li class="has-sub-menu"><a href="#"><i class="ti-files"></i><span>Sectores</span></a>

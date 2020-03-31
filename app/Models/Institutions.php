@@ -15,4 +15,19 @@ class Institutions extends Model
         return $this-> belongsTo(Sector::class);
 
     }
+
+    public function toppings()
+    {
+
+        return $this->hasMany(Toppings::class);
+
+    }
+
+    public function scopeSector($query, $sector){
+
+        if($sector)
+            return $query->where('sector_id', $sector);
+
+       // return $query->where('sector_id');
+    }
 }

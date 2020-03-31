@@ -12,8 +12,8 @@ class InstitutionsSeeder extends Seeder
     public function run()
     {
         $institutions = [
-            ['Centro de Salud Tulancingo', 'San José Caltengo', '7757531106','43624','3'],
-            ['Centro de Salud Nicolás Bravo', 'Consitución 141', '7757425456','43689','3'],
+            ['Centro de Salud Tulancingo', 'San José Caltengo', '7757531106','43624','66'],
+            ['Centro de Salud Nicolás Bravo', 'Consitución 141', '7757425456','43689','66'],
 
         ];
 

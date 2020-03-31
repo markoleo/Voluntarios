@@ -11,18 +11,12 @@ class SectorSeeder extends Seeder
      */
     public function run()
     {
-        $sectors = [
-            ['Escuela Publica', 'Publico'],
-            ['Escuela Privada', 'Privada'],
-            ['Centro de Salud', 'Publica'],
-            ['Clinica Publica', 'Publico'],
-            ['Clinica Privada', 'Privada'],
-        ];
-
-        foreach ($sectors as $sector){
+        $data = File::get("database/data/Sectors.json");
+        $sectors = json_decode($data);
+        foreach ($sectors as $sector) {
             App\Models\Sector::create([
-                'name' => $sector[0],
-                'category' => $sector[1],
+                'name' => $sector->name,
+                'category' => $sector->category,
                 'created_by' => 1,
                 'updated_by' => 1
             ]);

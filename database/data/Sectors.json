@@ -1,0 +1,337 @@
+[
+	{
+		
+		"name" : "Estancia infantil pública",
+		"category" : "Escolar"
+	},
+	{
+		
+		"name" : "Estancia infantil privada ",
+		"category" : "Escolar"
+	},
+	{
+		
+		"name" : "Preescolar público ",
+		"category" : "Escolar"
+	},
+	{
+		
+		"name" : "Prescolar privado",
+		"category" : "Escolar"
+	},
+	{
+		
+		"name" : "Primaria pública",
+		"category" : "Escolar"
+	},
+	{
+		
+		"name" : "Primaria privada",
+		"category" : "Escolar"
+	},
+	{
+		
+		"name" : "Secundaria pública",
+		"category" : "Escolar"
+	},
+	{
+		
+		"name" : "Secundaria privada",
+		"category" : "Escolar"
+	},
+	{
+		
+		"name" : "Educación Media Superior pública",
+		"category" : "Escolar"
+	},
+	{
+		
+		"name" : "Educación Media Superior privada",
+		"category" : "Escolar"
+	},
+	{
+		
+		"name" : "Educación Superior pública",
+		"category" : "Escolar"
+	},
+	{
+		
+		"name" : "Educación Superior privada",
+		"category" : "Escolar"
+	},
+	{
+		
+		"name" : "Posgrado o Especialización público",
+		"category" : "Escolar"
+	},
+	{
+		
+		"name" : "Posgrado o Especialización privado",
+		"category" : "Escolar"
+	},
+	{
+		
+		"name" : "Bares y antros",
+		"category" : "Comunitario"
+	},
+	{
+		
+		"name" : "Centros de Espectáculos",
+		"category" : "Comunitario"
+	},
+	{
+		
+		"name" : "Casinos y lugares de apuesta",
+		"category" : "Comunitario"
+	},
+	{
+		
+		"name" : "Eventos Masivos (conciertos, ferias, torneos deportivos",
+		"category" : "Comunitario"
+	},
+	{
+		
+		"name" : "Centros deportivos",
+		"category" : "Comunitario"
+	},
+	{
+		
+		"name" : "Unidad Habitacional/Colonia",
+		"category" : "Comunitario"
+	},
+	{
+		
+		"name" : "Centro comunitario",
+		"category" : "Comunitario"
+	},
+	{
+		
+		"name" : "Casa de cultura",
+		"category" : "Comunitario"
+	},
+	{
+		
+		"name" : "Mercado",
+		"category" : "Comunitario"
+	},
+	{
+		
+		"name" : "Iglesia",
+		"category" : "Comunitario"
+	},
+	{
+		
+		"name" : "Plaza pública o parque",
+		"category" : "Comunitario"
+	},
+	{
+		
+		"name" : "Asociaciones Políticas",
+		"category" : "Comunitario"
+	},
+	{
+		
+		"name" : "Asociaciones Civiles",
+		"category" : "Comunitario"
+	},
+	{
+		
+		"name" : "Asociaciones Comerciantes",
+		"category" : "Comunitario"
+	},
+	{
+		
+		"name" : "ONG's",
+		"category" : "Comunitario"
+	},
+	{
+		
+		"name" : "Instituciones de Asistencia Privada",
+		"category" : "Comunitario"
+	},
+	{
+		
+		"name" : "Reclusorios",
+		"category" : "Comunitario"
+	},
+	{
+		
+		"name" : "Comunidad de adolescentes en conflicto con la ley",
+		"category" : "Comunitario"
+	},
+	{
+		
+		"name" : "Comunidad migrante",
+		"category" : "Comunitario"
+	},
+	{
+		
+		"name" : "Clubes de Servicio (Rotarios, leones, damas voluntarias)",
+		"category" : "Comunitario"
+	},
+	{
+		
+		"name" : "Radio",
+		"category" : "Comunitario"
+	},
+	{
+		
+		"name" : "Televisión",
+		"category" : "Comunitario"
+	},
+	{
+		
+		"name" : "Medios Impresos",
+		"category" : "Comunitario"
+	},
+	{
+	
+		"name" : "Medios Electronicos (Portales de Internet)",
+		"category" : "Comunitario"
+	},
+	{
+		
+		"name" : "Agropecuario, Silvicultura y Pesca",
+		"category" : "Laboral"
+	},
+	{
+		
+		"name" : "Explotación de recursos (minas, petróleo, aserraderos, etc.)",
+		"category" : "Laboral"
+	},
+	{
+		
+		"name" : "Industria Manufacturera",
+		"category" : "Laboral"
+	},
+	{
+		
+		"name" : "Industria de la Construcción",
+		"category" : "Laboral"
+	},
+	{
+		
+		"name" : "Servicios comerciales (gas, agua y electricidad)",
+		"category" : "Laboral"
+	},
+	{
+		
+		"name" : "Restaurantes y Hoteles",
+		"category" : "Laboral"
+	},
+	{
+		
+		"name" : "Transporte, Almacenamiento y Comunicaciones",
+		"category" : "Laboral"
+	},
+	{
+		
+		"name" : "Servicios Financieros, Seguros y Bienes Inmuebles",
+		"category" : "Laboral"
+	},
+	{
+		
+		"name" : "Sindicatos",
+		"category" : "Laboral"
+	},
+	{
+		
+		"name" : "Corporativos",
+		"category" : "Laboral"
+	},
+	{
+		
+		"name" : "Cooperativas",
+		"category" : "Laboral"
+	},
+	{
+		
+		"name" : "Comercio Informa",
+		"category" : "Laboral"
+	},
+	{
+		
+		"name" : "Oficinas administrativas y gubernamentales, municipales, estatales y federales",
+		"category" : "Laboral"
+	},
+	{
+		
+		"name" : "Juzgados y ministerios públicos",
+		"category" : "Laboral"
+	},
+	{
+		
+		"name" : "Notarias",
+		"category" : "Laboral"
+	},
+	{
+		
+		"name" : "Seguridad Pública o Privada",
+		"category" : "Laboral"
+	},
+	{
+		
+		"name" : "Militar",
+		"category" : "Laboral"
+	},
+	{
+		
+		"name" : "Asociaciones y Clubes",
+		"category" : "Laboral"
+	},
+	{
+		
+		"name" : "Establecimiento recreativos",
+		"category" : "Laboral"
+	},
+	{
+		
+		"name" : "Escuelas",
+		"category" : "Laboral"
+	},
+	{
+		
+		"name" : "Unidades de salud",
+		"category" : "Laboral"
+	},
+	{
+		
+		"name" : "Centros comunitarios",
+		"category" : "Laboral"
+	},
+	{
+		
+		"name" : "Medios de comunicación",
+		"category" : "Laboral"
+	},
+	{
+		
+		"name" : "Clínica pública",
+		"category" : "Salud"
+	},
+	{
+		
+		"name" : "Clínica privada",
+		"category" : "Salud"
+	},
+	{
+		
+		"name" : "Hospital público",
+		"category" : "Salud"
+	},
+	{
+		
+		"name" : "Hospital privado",
+		"category" : "Salud"
+	},
+	{
+		
+		"name" : "Centro de Salud",
+		"category" : "Salud"
+	},
+	{
+		
+		"name" : "Institutos Nacionales de Salud",
+		"category" : "Salud"
+	}
+]

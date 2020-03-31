@@ -22,9 +22,10 @@ Route::resource('admin/programas', 'Admin\ReferencesController')->names([
     'create' => 'references.create',
     'store' => 'references.store',
     'edit' => 'references.edit',
-    'update' => 'references.update'
+    'update' => 'references.update',
+    'destroy' => 'references.destroy'
 ])->only([
-    'index', 'create', 'store', 'edit', 'update'
+    'index', 'create', 'store', 'edit', 'update', 'destroy'
 ])->parameters([
     'programas' => 'references'
 ]);
@@ -34,9 +35,10 @@ Route::resource('admin/proyectos', 'Admin\ProjectController')->names([
     'create' => 'projects.create',
     'store' => 'projects.store',
     'edit' => 'projects.edit',
-    'update' => 'projects.update'
+    'update' => 'projects.update',
+    'destroy' => 'projects.destroy'
 ])->only([
-    'index', 'create', 'store', 'edit', 'update'
+    'index', 'create', 'store', 'edit', 'update', 'destroy'
 ])->parameters([
     'proyectos' => 'projects'
 ]);
@@ -59,13 +61,38 @@ Route::resource('admin/sectores', 'Admin\SectorController')->names([
     'create' => 'sector.create',
     'store' => 'sector.store',
     'edit' => 'sector.edit',
-    'update' => 'sector.update'
+    'update' => 'sector.update',
+    'destroy'=>'sector.destroy'
 ])->only([
-    'index', 'create', 'store', 'edit', 'update'
+    'index', 'create', 'store', 'edit', 'update','destroy'
 ])->parameters([
     'sectores' => 'sector'
 ]);
 
+Route::resource('admin/instituciones', 'Admin\InstitutionsController')->names([
+    'index' => 'institutions.index',
+    'create' => 'institutions.create',
+    'store' => 'institutions.store',
+    'edit' => 'institutions.edit',
+    'update' => 'institutions.update',
+    'destroy'=>'institutions.destroy'
+])->only([
+    'index', 'create', 'store', 'edit', 'update','destroy'
+])->parameters([
+    'instituciones' => 'institutions'
+]);
+
+Route::resource('admin/Coberturas', 'Admin\ToppingsController')->names([
+    'index' => 'toppings.index',
+    'create' => 'toppings.create',
+    'store' => 'toppings.store'
+])->only([
+    'index', 'create', 'store'
+])->parameters([
+    'coberturas' => 'toppings'
+]);
+
+Route::get('lista-coberturas-excel','Admin\ToppingsController@exportExcel')->name('toppings.excel');
 
 Auth::routes();
 

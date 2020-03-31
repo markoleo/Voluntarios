@@ -16,6 +16,19 @@
 @section('content')
     <div class="col-12 mb-30">
         <div class="box">
+            <div class="box-head">
+                <div class="col-md-4 col-lg-4 col-12 mb-20">
+                    {{ Form::open(['route' => 'volunteers.index', 'method' => 'GET']) }}
+                    <div class="input-group">
+                        {{ Form::select('references', $reference, request('references', 1), ['class' => 'form-control']) }}
+                        <div class="input-group-append">
+                            <button type="submit" class="btn button-dark" ><i class="zmdi zmdi-search"></i></button>
+                        </div>
+                    </div>
+                    {{ Form::close() }}
+                </div>
+            </div>
+
             <div class="box-body">
                 <div class="table-responsive">
                     <table class="table table-hover table-bordered mb-0">

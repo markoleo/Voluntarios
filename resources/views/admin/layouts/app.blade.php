@@ -80,6 +80,9 @@
             toastr.success('{{session('success')}}');
         })(jQuery);
     </script>
+
+
+
 @endif
 </body>
 

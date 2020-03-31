@@ -89,9 +89,9 @@ class ProjectController extends Controller
         //
         $project =  Project::find($id);
         $project->fill([
-            'name' => ProjectController::ucfirst($request->name),
-            'short_name' => ProjectController::ucfirst($request->short_name),
-            'Project_Type' => ProjectController::ucfirst($request->Project_Type),
+            'name' => $request->name,
+            'short_name' => $request->short_name,
+            'Project_Type' => $request->Project_Type,
             'created_by' => 1,
             'updated_by' => 1
         ])->save();
@@ -107,13 +107,18 @@ class ProjectController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $project =  Project::find($id);
+        $project->fill([
+            'name' => $project->name,
+            'short_name' => $project->short_name,
+            'Project_Type' => $project->Project_Type,
+            'created_by' => 1,
+            'updated_by' => 1
+        ])->delete();
+
+        return redirect()->route('projects.index')->with('success','Se ha eliminado el proyecto' . $project->name);
+
     }
 
-    private static function ucfirst($string){
-        if(empty($string))
-            return null;
-        else
-            return Str::ucfirst($string);
-    }
+
 }

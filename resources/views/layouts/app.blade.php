@@ -19,6 +19,20 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
+    <link rel="stylesheet" href="{{asset("assets/core/bootstrap/css/bootstrap.min.css")}}">
+
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="{{asset("assets/core/material-design-iconic-font/css/material-design-iconic-font.min.css")}}">
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="{{asset("assets/css/plugins.min.css")}}">
+
+    <!-- Helper CSS -->
+    <link rel="stylesheet" href="{{asset("assets/css/helper.min.css")}}">
+
+    <!-- Custom Style CSS Only For Demo Purpose -->
+    <link id="cus-style" rel="stylesheet" href="{{asset("assets/css/style-orange.css")}}">
+
     <!-- CSS
     ============================================ -->
     @include('layouts.css')
@@ -31,7 +45,8 @@
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
-                CIJTulancingo
+                <img src="{{asset("assets/images/logo/CIJTulancingo3.png")}}" class="logo-light" alt="">
+
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                 <span class="navbar-toggler-icon"></span>
@@ -48,11 +63,15 @@
                     <!-- Authentication Links -->
                     @guest
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">Ingresar</a>
+                            <a class="nav-link" href="{{ route('login') }}">
+                                <button type="button" class="btn btn-outline-warning">Ingresar</button>
+                            </a>
                         </li>
                         @if (Route::has('register'))
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">Registrar</a>
+                                <a class="nav-link" href="{{ route('register') }}">
+                                    <button type="button" class="btn btn-outline-warning">Registrar</button>
+                                </a>
                             </li>
                         @endif
                     @else

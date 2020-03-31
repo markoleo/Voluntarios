@@ -105,7 +105,15 @@ class SectorController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $sector= Sector::find($id);
+        $sector->fill([
+            'name' => $sector->name,
+            'name' => $sector->name,
+            'created_by' => 1,
+            'updated_by' => 1
+        ])->delete();
+
+        return redirect()->route('sector.index')->with('success','Se ha eliminado el sector' . $sector->name);
     }
 
 

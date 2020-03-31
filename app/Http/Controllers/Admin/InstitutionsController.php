@@ -6,7 +6,9 @@ use App\Http\Requests\InstitutionUpdateRequest;
 use App\Http\Requests\InstitutionStoreRequest;
 use App\Http\Controllers\Controller;
 use App\Models\Institutions;
+use App\Models\Sector;
 use Illuminate\Support\Str;
+use Illuminate\Http\Request;
 
 class InstitutionsController extends Controller
 {
@@ -15,11 +17,19 @@ class InstitutionsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
-        $institution = Institutions::orderBy('name','ASC')->paginate(15);
-        return view('admin.institutions.index',compact('institution'));
+
+        $sector = $request->get('sector');
+
+        $sectors= Sector::orderBy('id')->pluck('name','id');
+
+        $institution = Institutions::orderBy('name','ASC')
+            ->sector($sector)
+            ->paginate(15)
+            ->appends('sector',$sector);
+        return view('admin.institutions.index',compact('sectors','institution'));
+
     }
 
     /**
@@ -29,8 +39,8 @@ class InstitutionsController extends Controller
      */
     public function create()
     {
-        //
-        return view('admin.institutions.create');
+        $sector = Sector::orderBy('id')->pluck('name','id');
+        return view('admin.institutions.create',compact('sector'));
     }
 
     /**
@@ -43,13 +53,15 @@ class InstitutionsController extends Controller
     {
         //
         Institutions::create([
-            'name' => InstitutionsController::ucfirst($request->name),
-            'short_name' => InstitutionsController::ucfirst($request->short_name),
-            'Project_Type' => InstitutionsController::ucfirst($request->Project_Type),
+            'name' => $request->name,
+            'address' =>$request->address,
+            'phone' => $request->phone,
+            'postal_code' =>$request->postal_code,
+            'sector_id' => $request->sector_id,
             'created_by' => 1,
             'updated_by' => 1
         ]);
-        return redirect()->route('institutions.index')->with('success','Se ha añadido el nuevo progrma: ' . $request->name);
+        return redirect()->route('institutions.index')->with('success','Se ha añadido el nueva institucion: ' . $request->name);
     }
 
     /**
@@ -71,9 +83,9 @@ class InstitutionsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $sector = Sector::orderBy('id')->pluck('name','id');
         $institution = Institutions::find($id);
-        return view('admin.institutions.edit',compact('institution'));
+        return view('admin.institutions.edit',compact('sector','institution'));
     }
 
     /**
@@ -83,14 +95,16 @@ class InstitutionsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(InstitutionUpdateRequest $request, $id)
+    public function update(InstitutionStoreRequest $request, $id)
     {
         //
         $institution =  Institutions::find($id);
         $institution->fill([
-            'name' => InstitutionsController::ucfirst($request->name),
-            'short_name' => InstitutionsController::ucfirst($request->short_name),
-            'Project_Type' => InstitutionsController::ucfirst($request->Project_Type),
+            'name' => $request->name,
+            'address' =>$request->address,
+            'phone' => $request->phone,
+            'postal_code' =>$request->postal_code,
+            'sector_id' => $request->sector_id,
             'created_by' => 1,
             'updated_by' => 1
         ])->save();
@@ -106,13 +120,19 @@ class InstitutionsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $institution= Institutions::find($id);
+        $institution->fill([
+            'name' => $institution->name,
+            'address' =>$institution->address,
+            'phone' => $institution->phone,
+            'postal_code' =>$institution->postal_code,
+            'sector_id' => $institution->sector_id,
+            'created_by' => 1,
+            'updated_by' => 1
+        ])->delete();
+
+        return redirect()->route('institutions.index')->with('success','Se ha eliminado el instituto ' . $institution->name);
     }
 
-    private static function ucfirst($string){
-        if(empty($string))
-            return null;
-        else
-            return Str::ucfirst($string);
-    }
+
 }
